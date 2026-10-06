@@ -1,0 +1,9 @@
+# Local QA harness dependencies — not part of the shipped site
+.qa/node_modules/
+.qa/vendor/
+.qa/package-lock.json
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log

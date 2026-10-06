@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FileTools — Free private PDF, image &amp; text tools that run in your browser</title>
+    <meta
+      name="description"
+      content="Convert DOCX, Excel and images to PDF, merge or split PDFs, compress and convert images, make QR codes and count words — 11 free tools that process everything locally. No uploads, no sign-up."
+    >
+    <link rel="canonical" href="https://filetools.app/">
+    <meta name="theme-color" content="#f5f6fb">
+    <meta name="color-scheme" content="light dark">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="FileTools">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="FileTools">
+    <meta property="og:title" content="FileTools — Free private file tools that run in your browser">
+    <meta
+      property="og:description"
+      content="11 free PDF, image and text tools. Every conversion happens on your device — your files are never uploaded."
+    >
+    <meta property="og:url" content="https://filetools.app/">
+    <meta property="og:image" content="https://filetools.app/favicon.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="FileTools — Free private file tools">
+    <meta name="twitter:description" content="Convert, merge, split, compress and generate — all client-side, all free.">
+    <meta name="twitter:image" content="https://filetools.app/favicon.svg">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "FileTools",
+        "url": "https://filetools.app/",
+        "description": "Free browser-based file tools for PDF, image and text tasks. All processing happens client-side.",
+        "inLanguage": "en",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://filetools.app/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header" data-component="site-header"></header>
+
+    <main id="main">
+      <!-- ===================== Hero ===================== -->
+      <section class="hero">
+        <div class="container hero__inner page-enter">
+          <span class="eyebrow">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 9-12h-6.5z"/></svg>
+            11 tools · 0 uploads
+          </span>
+          <h1>Every file task, <span class="text-gradient">done in your browser</span></h1>
+          <p class="lead">
+            Convert Word and Excel files to PDF, merge or split PDFs, compress images, build QR codes and
+            count words. Nothing is uploaded anywhere — the work happens on your device, instantly.
+          </p>
+
+          <div class="searchbar" role="search">
+            <label class="sr-only" for="tool-search">Search all tools</label>
+            <span class="searchbar__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+            </span>
+            <input id="tool-search" type="search" placeholder="Search “merge pdf”, “compress”, “qr”…" autocomplete="off">
+            <p class="searchbar__count" id="search-count" aria-live="polite"></p>
+          </div>
+
+          <div class="hero__badges">
+            <span class="privacy-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.4-3 8-7 9-4-1-7-4.6-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+              Your files never leave your device
+            </span>
+            <span class="tag">No sign-up</span>
+            <span class="tag">No watermarks</span>
+            <span class="tag">Works offline once loaded</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Tools ===================== -->
+      <section class="section section--tight" id="tools" aria-labelledby="tools-heading">
+        <div class="container">
+          <div class="section-head center reveal">
+            <h2 id="tools-heading">All tools</h2>
+            <p>Filter by category or use the search box — everything is free and unlimited.</p>
+          </div>
+
+          <div class="chips reveal" id="category-chips" role="group" aria-label="Filter tools by category"></div>
+
+          <div class="tools-grid tools-grid--4 mt-3" id="tools-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- ===================== How it works ===================== -->
+      <section class="section" id="how-it-works" aria-labelledby="how-heading">
+        <div class="container">
+          <div class="section-head center reveal">
+            <h2 id="how-heading">How it works</h2>
+            <p>Three steps, no account, no waiting room.</p>
+          </div>
+          <div class="steps">
+            <article class="step reveal">
+              <div class="step__num">1</div>
+              <h3>Drop your file</h3>
+              <p>Drag a file onto the drop zone or tap “Choose file”. Type and size are checked on the spot.</p>
+            </article>
+            <article class="step reveal">
+              <div class="step__num">2</div>
+              <h3>Tune the options</h3>
+              <p>Page size, quality, orientation, page ranges — every tool shows a live preview before you commit.</p>
+            </article>
+            <article class="step reveal">
+              <div class="step__num">3</div>
+              <h3>Download instantly</h3>
+              <p>The result is generated in your browser and downloaded straight to your device. Close the tab and it's gone.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Why choose us ===================== -->
+      <section class="section section--tight" id="why" aria-labelledby="why-heading">
+        <div class="container">
+          <div class="section-head center reveal">
+            <h2 id="why-heading">Why people use FileTools</h2>
+            <p>Privacy and speed are not trade-offs here — the tools literally cannot upload your files.</p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature reveal">
+              <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.4-3 8-7 9-4-1-7-4.6-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+              <h3>Secure by design</h3>
+              <p>There is no server to breach. Conversion libraries run in your tab and never see the network.</p>
+            </article>
+            <article class="feature reveal">
+              <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v8"/><path d="M4 14v3a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-3"/><path d="m8 8 4-4 4 4"/></svg></span>
+              <h3>No upload, ever</h3>
+              <p>Your documents stay on your device, which also means no queue and no file-size waiting game.</p>
+            </article>
+            <article class="feature reveal">
+              <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 9-12h-6.5z"/></svg></span>
+              <h3>Fast &amp; instant</h3>
+              <p>Local CPU beats any upload. A 5 MB PDF merges in well under a second.</p>
+            </article>
+            <article class="feature reveal">
+              <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5h8M12 8.5v8"/></svg></span>
+              <h3>Free &amp; unlimited</h3>
+              <p>No trial, no watermark, no daily cap. Use every tool as often as you like.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Privacy band ===================== -->
+      <section class="section section--tight" aria-labelledby="privacy-heading">
+        <div class="container">
+          <div class="privacy-band reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            <div>
+              <strong id="privacy-heading">Your files never leave your device.</strong>
+              All processing happens in your browser — no uploads, no storage, no analytics on your documents.
+              <a href="privacy.html">Read exactly how it works</a>.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FAQ ===================== -->
+      <section class="section faq-section" id="faq" aria-labelledby="faq-heading" data-component="faq">
+        <div class="container">
+          <div class="section-head center reveal">
+            <h2 id="faq-heading">Frequently asked questions</h2>
+          </div>
+          <div class="accordion reveal">
+            <div class="accordion__item">
+              <h3>
+                <button class="accordion__trigger" type="button" aria-expanded="false">
+                  <span>Are my files really not uploaded?</span>
+                  <svg class="accordion__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </h3>
+              <div class="accordion__panel"><div><p>Yes. FileTools is a static site with no backend: there is no server endpoint your file could be sent to. The JavaScript libraries do the conversion inside your browser tab, and the output is created as a local download. You can verify it yourself in the Network tab of your developer tools.</p></div></div>
+            </div>
+            <div class="accordion__item">
+              <h3>
+                <button class="accordion__trigger" type="button" aria-expanded="false">
+                  <span>How large can my files be?</span>
+                  <svg class="accordion__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </h3>
+              <div class="accordion__panel"><div><p>Each tool states its own limit (usually 50 MB for documents and images, 100 MB for PDFs). Because everything runs in memory, the real ceiling is your device's RAM — very large PDFs with hundreds of scanned pages may take longer or need a 64-bit browser.</p></div></div>
+            </div>
+            <div class="accordion__item">
+              <h3>
+                <button class="accordion__trigger" type="button" aria-expanded="false">
+                  <span>Which file formats are supported?</span>
+                  <svg class="accordion__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </h3>
+              <div class="accordion__panel"><div><p>Documents: DOCX to PDF, XLSX/XLS/CSV to PDF, TXT to PDF. Images: JPG, PNG, WEBP (plus GIF and BMP as input for conversion). PDFs: merge, split, and export pages to PNG or JPG. Utilities: QR codes (PNG/SVG) and a live word counter.</p></div></div>
+            </div>
+            <div class="accordion__item">
+              <h3>
+                <button class="accordion__trigger" type="button" aria-expanded="false">
+                  <span>Does it work offline or on mobile?</span>
+                  <svg class="accordion__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </h3>
+              <div class="accordion__panel"><div><p>The layout is mobile-first and every control is touch-friendly from 320 px up to 4K. Once a page and its libraries are loaded you can keep converting without a connection — but the conversion libraries themselves are fetched from a CDN on first load, so you need internet for that first visit.</p></div></div>
+            </div>
+            <div class="accordion__item">
+              <h3>
+                <button class="accordion__trigger" type="button" aria-expanded="false">
+                  <span>Why is my DOCX layout slightly different?</span>
+                  <svg class="accordion__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </h3>
+              <div class="accordion__panel"><div><p>Browsers cannot replicate Word's exact pagination engine, so page breaks and some advanced styling (headers/footers, text boxes, tracked changes) can shift. Headings, bold/italic, lists, tables, links and images are preserved, and the live preview shows you the result before you download.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== CTA ===================== -->
+      <section class="section section--tight" aria-labelledby="cta-heading">
+        <div class="container center reveal">
+          <h2 id="cta-heading" class="section-head center">Pick a tool and start</h2>
+          <a class="btn btn--primary btn--lg" href="#tools">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4"/><path d="m7.5 8.5 4.5-4.5 4.5 4.5"/><path d="M4 16v2.5A2.5 2.5 0 0 0 6.5 21h11a2.5 2.5 0 0 0 2.5-2.5V16"/></svg>
+            Browse all tools
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-component="site-footer"></footer>
+
+    <script src="js/tools.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/home.js" defer></script>
+  </body>
+</html>

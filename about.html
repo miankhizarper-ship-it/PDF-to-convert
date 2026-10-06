@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About FileTools — private, in-browser file tools with no uploads</title>
+    <meta
+      name="description"
+      content="Why FileTools exists: 11 free PDF, image and text tools that run entirely in your browser. No server processing, no accounts, no file uploads — and how the client-side architecture makes that possible."
+    >
+    <link rel="canonical" href="https://filetools.app/about.html">
+    <meta name="theme-color" content="#f5f6fb">
+    <meta name="color-scheme" content="light dark">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="FileTools">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="FileTools">
+    <meta property="og:title" content="About FileTools">
+    <meta property="og:description" content="11 free file tools that run entirely in your browser. No uploads, no accounts, no tracking of your documents.">
+    <meta property="og:url" content="https://filetools.app/about.html">
+    <meta property="og:image" content="https://filetools.app/favicon.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="About FileTools">
+    <meta name="twitter:description" content="Private, in-browser file tools. Everything is processed on your device.">
+    <meta name="twitter:image" content="https://filetools.app/favicon.svg">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About FileTools",
+        "url": "https://filetools.app/about.html",
+        "description": "Why FileTools exists and how client-side file tools keep your documents private.",
+        "inLanguage": "en",
+        "publisher": {
+          "@type": "Organization",
+          "name": "FileTools",
+          "url": "https://filetools.app/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header" data-component="site-header"></header>
+
+    <main id="main">
+      <section class="container">
+        <div class="tool-head page-enter">
+          <span class="tool-head__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 7.5v.01"/></svg>
+          </span>
+          <h1 id="page-title">About FileTools</h1>
+          <p class="lead">
+            FileTools is a small collection of file utilities with one non-negotiable rule: your files never
+            leave your device. Everything you see is HTML, CSS and JavaScript running in your own browser tab.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tight" aria-labelledby="story-heading">
+        <div class="container container--narrow">
+          <div class="prose">
+            <h2 id="story-heading">Why we built it</h2>
+            <p>
+              Most online file converters ask you to upload a document to somebody else's server, wait in a
+              queue, and hope the retention policy is as short as advertised. For everyday tasks — turning a
+              Word file into a PDF, joining two reports, shrinking a photo — that trade-off is unnecessary.
+              Modern browsers can do all of it locally, at full speed, without a round trip.
+            </p>
+            <p>
+              So FileTools ships no backend at all. There is no upload endpoint, no worker queue and no
+              database. When you drop a file here, it is read by your browser's <code>File</code> API and
+              processed by an open-source JavaScript library running on your own CPU.
+            </p>
+
+            <div class="callout callout--success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.4-3 8-7 9-4-1-7-4.6-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+              <div>
+                <strong>Your files never leave your device.</strong> All processing happens in your browser.
+                You can confirm it yourself: open the Network tab in your browser's developer tools, use any
+                tool, and you will see no request carrying your file.
+              </div>
+            </div>
+
+            <h2>How it is built</h2>
+            <p>
+              The site is plain HTML, CSS and JavaScript — no framework, no build step. Conversion work is
+              handled by well-known open-source libraries loaded from a CDN and pinned to exact versions:
+            </p>
+            <ul>
+              <li><strong>mammoth.js</strong> reads <code>.docx</code> files and turns them into HTML.</li>
+              <li><strong>html2pdf.js</strong> paginates that HTML into a PDF.</li>
+              <li><strong>SheetJS</strong> parses XLSX, XLS and CSV workbooks.</li>
+              <li><strong>jsPDF</strong> with <strong>jspdf-autotable</strong> draws tables and text as PDF.</li>
+              <li><strong>pdf-lib</strong> merges, splits and edits PDF page trees.</li>
+              <li><strong>pdf.js</strong> renders PDF pages to images.</li>
+              <li><strong>JSZip</strong> bundles multiple outputs into one archive.</li>
+              <li><strong>qrcode-generator</strong> builds QR code matrices.</li>
+            </ul>
+            <p>
+              Every tool page loads only the libraries it needs, so the home page stays light. Object URLs are
+              revoked after use, long conversions yield to the event loop so the interface keeps responding,
+              and every failure path produces a message you can act on.
+            </p>
+
+            <h2>What we do not do</h2>
+            <ul>
+              <li>No accounts, no sign-in and no email address required.</li>
+              <li>No watermarks, no daily limits, no premium tier.</li>
+              <li>No document analytics — your files are never inspected by anyone but you.</li>
+              <li>No third-party advertising scripts.</li>
+            </ul>
+
+            <h2>Limits worth knowing</h2>
+            <p>
+              Client-side processing means the ceiling is your device, not a server plan. Very large files are
+              held in browser memory, so a 400-page scanned PDF at maximum resolution can be slow or fail on a
+              low-memory phone. The conversion libraries are fetched from a CDN on first load, so you need a
+              connection for that first visit; after that the browser cache takes over.
+            </p>
+
+            <p>
+              Questions or a tool request? <a href="contact.html">Send us a note</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight related-section" aria-labelledby="related-heading">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 id="related-heading">Popular tools</h2>
+            <p>Start with the ones people use most.</p>
+          </div>
+          <div class="related" data-component="related-tools"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-component="site-footer"></footer>
+
+    <script src="js/tools.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/static-page.js" defer></script>
+  </body>
+</html>

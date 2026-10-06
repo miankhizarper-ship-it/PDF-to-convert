@@ -1,0 +1,8 @@
+# FileTools — static, client-side file tools
+User-agent: *
+Allow: /
+
+# Nothing on this site is generated server-side; every page is safe to crawl.
+Disallow:
+
+Sitemap: https://filetools.app/sitemap.xml

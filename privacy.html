@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy — how FileTools keeps your files on your device</title>
+    <meta
+      name="description"
+      content="FileTools privacy policy in plain language: no uploads, no storage, no document analytics. Learn exactly what stays in your browser, which CDN libraries are loaded and what minimal browser data is involved."
+    >
+    <link rel="canonical" href="https://filetools.app/privacy.html">
+    <meta name="theme-color" content="#f5f6fb">
+    <meta name="color-scheme" content="light dark">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="FileTools">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="FileTools">
+    <meta property="og:title" content="FileTools privacy policy">
+    <meta property="og:description" content="No uploads, no storage, no document analytics. Everything is processed in your browser.">
+    <meta property="og:url" content="https://filetools.app/privacy.html">
+    <meta property="og:image" content="https://filetools.app/favicon.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="FileTools privacy policy">
+    <meta name="twitter:description" content="No uploads, no storage, no document analytics.">
+    <meta name="twitter:image" content="https://filetools.app/favicon.svg">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "FileTools privacy policy",
+        "url": "https://filetools.app/privacy.html",
+        "description": "Plain-language privacy policy for a client-side file tools site.",
+        "inLanguage": "en"
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header" data-component="site-header"></header>
+
+    <main id="main">
+      <section class="container">
+        <div class="tool-head page-enter">
+          <span class="tool-head__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.4-3 8-7 9-4-1-7-4.6-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+          </span>
+          <h1 id="page-title">Privacy</h1>
+          <p class="lead">
+            The short version: <strong>your files never leave your device</strong>. There is no upload, no
+            server-side processing and no copy of your documents anywhere but your own machine.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tight" aria-labelledby="details-heading">
+        <div class="container container--narrow">
+          <div class="prose">
+            <h2 id="details-heading">What happens when you use a tool</h2>
+            <ol>
+              <li>You pick a file. Your browser reads it from disk into memory through the standard file input.</li>
+              <li>A JavaScript library in the page converts, merges, splits or compresses it — on your CPU.</li>
+              <li>The result is turned into a download in your browser and saved to your device.</li>
+              <li>When you close the tab, the memory is released. Nothing was transmitted.</li>
+            </ol>
+
+            <h2>What we never do</h2>
+            <ul>
+              <li>We never upload your files — there is no backend service to upload them to.</li>
+              <li>We never store, cache or index your documents.</li>
+              <li>We never require an account, an email address or a payment method.</li>
+              <li>We never run advertising or cross-site tracking scripts.</li>
+              <li>We never read the contents of your files for any purpose other than the conversion you asked for.</li>
+            </ul>
+
+            <h2>What does leave your browser</h2>
+            <p>
+              Two things, neither of them your documents:
+            </p>
+            <ul>
+              <li>
+                <strong>Static assets.</strong> The page loads its stylesheet and the Inter typeface from
+                Google Fonts, and the conversion libraries (mammoth.js, SheetJS, jsPDF, pdf-lib, pdf.js,
+                JSZip, qrcode-generator) from the jsDelivr CDN. Those requests carry the same information any
+                website request does — your IP address and browser details — but never your file contents.
+                Versions are pinned, so the code you run does not change without a new release of this site.
+              </li>
+              <li>
+                <strong>Hosting logs.</strong> Wherever you host this site records ordinary web-server logs
+                (IP address, requested page, timestamp) for security and uptime. Those logs contain no file
+                data because no file is ever sent.
+              </li>
+            </ul>
+
+            <h2>Local storage</h2>
+            <p>
+              The only thing written to your browser's local storage is your theme preference
+              (<code>light</code> or <code>dark</code>) under the key <code>filetools-theme</code>. A
+              one-off search term may be kept in session storage purely to hand it from the header search box
+              to the home page grid; it is deleted immediately and never sent anywhere.
+            </p>
+
+            <h2>Verifying it yourself</h2>
+            <p>
+              Open your browser's developer tools → Network tab, filter by “Fetch/XHR”, and use any tool. You
+              will see the CDN requests for the libraries and nothing else. No request will contain your file.
+            </p>
+
+            <div class="callout">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 7.5v.01"/></svg>
+              <div>
+                Because processing happens in memory, confidential documents are a good fit — but a browser tab
+                is still your own machine. Keep your operating system and browser up to date, and remember that
+                anything you download lands in your downloads folder like any other file.
+              </div>
+            </div>
+
+            <h2>Changes to this policy</h2>
+            <p>
+              If this ever changes, the update will be published on this page before it takes effect. As long
+              as the site has no backend, there is simply no mechanism by which your files could be collected.
+            </p>
+
+            <p>Last updated: 6 October 2026.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight related-section" aria-labelledby="related-heading">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 id="related-heading">Popular tools</h2>
+          </div>
+          <div class="related" data-component="related-tools"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-component="site-footer"></footer>
+
+    <script src="js/tools.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/static-page.js" defer></script>
+  </body>
+</html>
